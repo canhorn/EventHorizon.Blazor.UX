@@ -11,6 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.UX.Cont
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA463E7F-425D-4C40-830E-6761BD09A4F5}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\azure-static-web-apps-lively-mud-0597d4e10.yml = .github\workflows\azure-static-web-apps-lively-mud-0597d4e10.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
