@@ -1,0 +1,15 @@
+﻿<tr class="table__row" @attributes="Attributes">@ChildContent</tr>
+
+<style>
+    tr.table {
+        border-bottom: 15px solid green;
+    }
+</style>
+
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IDictionary<string, object> Attributes { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

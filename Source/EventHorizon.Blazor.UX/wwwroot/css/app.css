@@ -42,6 +42,26 @@ a.link {
     text-decoration: none;
 }
 
+/*Scroll Bar Customization */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 1px solid rgba(172,249,251,0.65);
+    transition: border 500ms ease-in;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        border: 1px solid rgba(172,249,251,0.95);
+    }
+
 /* Loading Component */
 .hide-loading {
     visibility: hidden;

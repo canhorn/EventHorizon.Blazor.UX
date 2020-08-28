@@ -1,0 +1,51 @@
+﻿
+<div class="table table__container">
+    <table class="c011024">
+        <thead>
+            <TableRow>
+                @Head
+            </TableRow>
+        </thead>
+        <tbody>
+            @Body
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .table.table__container {
+        margin: 0 0 20px;
+        display: block;
+        opacity: 1;
+        font-size: 80%;
+        overflow-x: auto;
+        transition: all 250ms ease-out;
+    }
+
+    .table table {
+        border-collapse: collapse;
+    }
+
+    .table thead {
+        color: #a1ecfb;
+        text-align: left;
+        font-family: "Electrolize", "sans-serif";
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .table tr {
+        border-bottom: 1px solid rgba(2,157,187,0.325);
+    }
+
+    .table tbody p, .table tbody ul, .table tbody ol, .table tbody dl, .table tbody blockquote {
+        margin-bottom: 0;
+    }
+</style>
+
+@code {
+    [Parameter]
+    public RenderFragment Head { get; set; }
+    [Parameter]
+    public RenderFragment Body { get; set; }
+}
