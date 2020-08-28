@@ -1,0 +1,93 @@
+﻿
+.button {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+    .button button {
+        color: #26dafd;
+        display: block;
+        font-size: 21px;
+        transition: all 250ms ease-out;
+        line-height: 1.5;
+        font-family: "Titillium Web", "sans-serif";
+        cursor: pointer;
+    }
+
+        .button button:focus,
+        .button button:hover {
+            border: 1px solid;
+        }
+
+.--blink {
+    background-color: white;
+}
+
+.button__background {
+    background-color: rgba(6,43,45,0.65);
+    z-index: 3;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 250ms ease-in;
+}
+
+button.button__element {
+    width: 100%;
+    margin: 0;
+    border: none;
+    z-index: 2;
+    display: inline-block;
+    padding: 10px 20px;
+    outline: none;
+    position: relative;
+    font-size: 15.75px;
+    background: transparent;
+    transition: all 250ms ease-out;
+    line-height: 1;
+    user-select: none;
+    vertical-align: middle;
+    border: 1px solid rgba(6,43,45,0.65);
+}
+
+.button__background:hover .button__corner {
+    background-color: #26dafd;
+    opacity: 0.65;
+}
+
+.button__element:focus ~ .button__corner {
+    background-color: #26dafd;
+    opacity: 0.65;
+}
+
+.button__corner {
+    background-color: inherit;
+    height: 8px;
+    width: 8px;
+}
+
+    .button__corner.--bottom-left {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .button__corner.--bottom-right {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .button__corner.--top-left {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .button__corner.--top-right {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }

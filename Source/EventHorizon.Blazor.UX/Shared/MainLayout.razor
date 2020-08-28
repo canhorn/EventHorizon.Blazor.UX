@@ -1,0 +1,24 @@
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="page__background">
+    </div>
+    <div class="main">
+        <div class="top-row">
+            <NavLink class="link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+            <NavLink class="link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </NavLink>
+            <NavLink class="link" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+            <a href="http://blazor.net" target="_blank" class="link ml-md-auto">About</a>
+        </div>
+
+        <div class="content">
+            @Body
+        </div>
+    </div>
+</div>

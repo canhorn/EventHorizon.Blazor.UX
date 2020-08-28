@@ -1,0 +1,46 @@
+﻿
+<div class="button @Animation">
+    <div class="button__background">
+        <button class="button__element" @onclick="HandleOnClick">@ChildContent</button>
+        <div class="button__corner --bottom-left"></div>
+        <div class="button__corner --bottom-right"></div>
+        <div class="button__corner --top-left"></div>
+        <div class="button__corner --top-right"></div>
+    </div>
+</div>
+
+@code {
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public string SoundPath { get; set; } = "/_content/EventHorizon.Blazor.UX.Controls/sounds/click.mp3";
+
+    public string Animation { get; set; } = string.Empty;
+
+    public async Task HandleOnClick(MouseEventArgs args)
+    {
+        await OnClick.InvokeAsync(args);
+
+        Animation = "--blink";
+        if (!string.IsNullOrEmpty(SoundPath))
+        {
+            // TODO: Create Sound Service
+            await JSRuntime.InvokeVoidAsync(
+                "ehzBlazorUx.playAudioFile",
+                SoundPath
+            );
+        }
+        // TODO: Create Delay Service
+        await Task.Run(() =>
+        {
+            System.Threading.Thread.Sleep(10);
+            Animation = string.Empty;
+            InvokeAsync(StateHasChanged);
+        });
+    }
+}

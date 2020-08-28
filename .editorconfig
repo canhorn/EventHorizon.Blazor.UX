@@ -1,0 +1,29 @@
+﻿[*.cs]
+
+# Enforce _ fields instances
+dotnet_naming_rule.instance_fields_should_be_camel_case.severity = suggestion
+dotnet_naming_rule.instance_fields_should_be_camel_case.symbols = instance_fields
+dotnet_naming_rule.instance_fields_should_be_camel_case.style = instance_field_style
+ 
+dotnet_naming_symbols.instance_fields.applicable_kinds = field
+ 
+dotnet_naming_style.instance_field_style.capitalization = camel_case
+dotnet_naming_style.instance_field_style.required_prefix = _
+
+# CA1063: Implement IDisposable Correctly
+dotnet_diagnostic.CA1063.severity = none
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+# IDE0005: Remove unnecessary imports
+dotnet_diagnostic.IDE0005.severity = warning
+
+# CA1715: Prefix interface name CommandDeletedObserver with 'I'
+dotnet_diagnostic.CA1715.severity = none
+
+# CA1056: Change the type of property AuthRequestState.RedirectUrl from string to System.Uri
+dotnet_diagnostic.CA1056.severity = none
+
+# CA2007: Consider calling ConfigureAwait on the awaited task
+dotnet_diagnostic.CA2007.severity = none

@@ -1,0 +1,7 @@
+﻿a.link {
+    color: #acf9fb;
+    cursor: pointer;
+    transition: color 250ms ease-out;
+    text-shadow: 0 0 4px rgba(172,249,251,0.65);
+    text-decoration: none;
+}
