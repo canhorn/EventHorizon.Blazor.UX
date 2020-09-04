@@ -1,15 +1,6 @@
 ﻿window.ehzBlazorUx = {
     playAudioFile: (src) => {
-        const sound = document.createElement('audio');
-        sound.id = src;
-        sound.src = src;
-        sound.type = 'audio/mpeg';
-        document.body.appendChild(sound);
-        sound.load();
-        sound.play();
-        sound.addEventListener("ended", () => {
-            sound.remove();
-        });
+        new Audio(src).play();
     },
     transitionFunction: function (back) {
 
