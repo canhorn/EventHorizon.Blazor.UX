@@ -1,14 +1,14 @@
 .page {
-    color: #26dafd;
+    color: var(--main-foreground-color);
 }
 
 .page__background {
-    background-color: black;
+    background-color: var(--main-background-color);
+    background-image: var(--main-background-image);
     height: 100%;
     position: fixed;
     display: inline-block;
     top: 0;
-    background-image: url(/image/background.png);
     background-attachment: fixed;
     bottom: 0;
     left: 0;
@@ -20,21 +20,17 @@
     flex: 1;
 }
 
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
 .top-row {
-    background-color: black;
-    background-image: url(/image/background.png);
+    background-color: var(--main-background-color);
+    background-image: var(--main-background-image);
     background-attachment: fixed;
-    border-bottom: 1px solid #d6d5d5;
+    border-bottom: 1px solid var(--main-accent-color);
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
-    padding-left: 2rem !important;
-    padding-right: 1.5rem !important;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
 }
 
     .top-row ::deep a, .top-row .btn-link {

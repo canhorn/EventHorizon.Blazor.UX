@@ -9,6 +9,7 @@
 
 .transitioning {
     position: absolute;
+    overflow: hidden;
     left: 0;
     right: 0;
 }

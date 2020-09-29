@@ -1,5 +1,4 @@
-﻿
-.button {
+﻿.button {
     display: inline-block;
     overflow: hidden;
     padding: 0px;
@@ -7,12 +6,12 @@
 }
 
     .button button {
-        color: #26dafd;
+        color: var(--button-color);
         display: block;
         font-size: 21px;
         transition: all 250ms ease-out;
         line-height: 1.5;
-        font-family: "Titillium Web", "sans-serif";
+        font-family: var(--font-family);
         cursor: pointer;
     }
 
@@ -22,11 +21,11 @@
         }
 
 .--blink {
-    background-color: white;
+    background-color: var(--button-blink-color);
 }
 
 .button__background {
-    background-color: rgba(6,43,45,0.65);
+    background-color: var(--button-background-color);
     z-index: 3;
     display: block;
     position: relative;
@@ -49,16 +48,16 @@ button.button__element {
     line-height: 1;
     user-select: none;
     vertical-align: middle;
-    border: 1px solid rgba(6,43,45,0.65);
+    border: 1px solid var(--button-border-color);
 }
 
 .button__background:hover .button__corner {
-    background-color: #26dafd;
+    background-color: var(--button-corner-background-color);
     opacity: 0.65;
 }
 
 .button__element:focus ~ .button__corner {
-    background-color: #26dafd;
+    background-color: var(--button-corner-background-color);
     opacity: 0.65;
 }
 

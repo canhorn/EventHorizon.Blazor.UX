@@ -1,20 +1,22 @@
-﻿<Router AppAssembly="@typeof(Program).Assembly">
-    <Found Context="routeData">
-        <LayoutView Layout="@typeof(MainLayout)">
-            <TransitionableRoutePrimary RouteData="@routeData">
-                <TransitionableRouteView DefaultLayout="@typeof(MyViewLayout)" />
-            </TransitionableRoutePrimary>
-            <TransitionableRouteSecondary RouteData="@routeData">
-                <TransitionableRouteView DefaultLayout="@typeof(MyViewLayout)" />
-            </TransitionableRouteSecondary>
-        </LayoutView>
-    </Found>
-    <NotFound>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p>Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
+﻿<ThemeProvider>
+    <Router AppAssembly="@typeof(Program).Assembly">
+        <Found Context="routeData">
+            <LayoutView Layout="@typeof(MainLayout)">
+                <TransitionableRoutePrimary RouteData="@routeData">
+                    <TransitionableRouteView DefaultLayout="@typeof(MyViewLayout)" />
+                </TransitionableRoutePrimary>
+                <TransitionableRouteSecondary RouteData="@routeData">
+                    <TransitionableRouteView DefaultLayout="@typeof(MyViewLayout)" />
+                </TransitionableRouteSecondary>
+            </LayoutView>
+        </Found>
+        <NotFound>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</ThemeProvider>
 
 @code {
     [Inject]

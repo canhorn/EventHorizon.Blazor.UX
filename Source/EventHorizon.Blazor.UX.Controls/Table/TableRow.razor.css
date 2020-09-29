@@ -1,0 +1,3 @@
+﻿.table__row {
+    border-bottom: 1px solid var(--table-row-color);
+}

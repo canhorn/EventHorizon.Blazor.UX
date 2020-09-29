@@ -1,10 +1,5 @@
-﻿<div class="crt @(AnimateEnabled ? "--animate" : string.Empty)">
+﻿@inherits AnimateModel
+
+<div class="crt @(AnimateEnabled ? "--animate" : string.Empty)">
     @ChildContent
 </div>
-
-@code {
-    [Parameter]
-    public bool AnimateEnabled { get; set; } = true;
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
-}

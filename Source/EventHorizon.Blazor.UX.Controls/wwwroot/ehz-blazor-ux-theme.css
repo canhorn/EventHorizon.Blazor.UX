@@ -1,0 +1,15 @@
+﻿:root {
+    --font-family: "Electrolize", "sans-serif";
+    /* Button Styles */
+    --button-color: #26dafd;
+    --button-background-color: rgba(6, 43, 45, 0.65);
+    --button-blink-color: white;
+    --button-border-color: rgba(6, 43, 45, 0.65);
+    --button-corner-background-color: #26dafd;
+    /* Link Styles */
+    --link-color: #acf9fb;
+    --link-shadow-color: rgba(172,249,251,0.65);
+    /* Table Styles */
+    --table-head-color: #a1ecfb;
+    --table-row-color: rgba(2,157,187,0.325);
+}

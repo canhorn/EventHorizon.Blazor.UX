@@ -4,7 +4,7 @@
 }
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
     padding: 0px;
     margin: 0px;
     height: 100vh;
@@ -35,10 +35,13 @@ html, body {
 
 /* Controls */
 a.link {
-    color: #acf9fb;
+    color: var(--main-foreground-color);
     cursor: pointer;
     transition: color 250ms ease-out;
-    text-shadow: 0 0 4px rgba(172,249,251,0.65);
+    text-shadow: 0 0 4px var(--main-foreground-shadow-color);
+}
+
+.top-row a.link {
     text-decoration: none;
 }
 
@@ -49,17 +52,17 @@ a.link {
 }
 
 ::-webkit-scrollbar-track {
-    background: #151515;
+    background: var(--scrollbar-thumb-track-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: black;
-    border: 1px solid rgba(172,249,251,0.65);
+    background: var(--scrollbar-thumb-thumb-color);
+    border: 1px solid var(--scrollbar-thumb-border-color);
     transition: border 500ms ease-in;
 }
 
     ::-webkit-scrollbar-thumb:hover {
-        border: 1px solid rgba(172,249,251,0.95);
+        border: 1px solid var(--scrollbar-thumb-border-hover-color);
     }
 
 /* Loading Component */
