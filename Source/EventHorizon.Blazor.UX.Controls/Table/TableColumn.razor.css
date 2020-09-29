@@ -1,0 +1,9 @@
+﻿.table__column {
+    color: var(--table-head-color);
+    font-family: var(--font-family);
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 5px;
+    vertical-align: top;
+}

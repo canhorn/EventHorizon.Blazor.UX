@@ -1,0 +1,21 @@
+﻿.table {
+    margin: 0 0 20px;
+    display: block;
+    opacity: 1;
+    font-size: 1rem;
+    overflow-x: auto;
+    transition: all 250ms ease-out;
+}
+
+.table__element {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table .table__body p, 
+.table .table__body ul, 
+.table .table__body ol, 
+.table .table__body dl, 
+.table .table__body blockquote {
+    margin-bottom: 0;
+}
