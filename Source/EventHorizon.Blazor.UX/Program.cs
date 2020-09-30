@@ -1,13 +1,10 @@
 using System;
 using System.Net.Http;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Text;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using EventHorizon.Blazor.UX.Shared;
+using EventHorizon.Blazor.UX.Shared.Layout;
+using EventHorizon.Blazor.UX.Shared.Data;
 
 namespace EventHorizon.Blazor.UX
 {
@@ -21,6 +18,8 @@ namespace EventHorizon.Blazor.UX
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddScoped<BlazorTransitionableRoute.IRouteTransitionInvoker, RouteTransitionInvoker>();
+
+            builder.Services.AddSingleton<WeatherForecastService>();
 
             await builder.Build().RunAsync();
         }

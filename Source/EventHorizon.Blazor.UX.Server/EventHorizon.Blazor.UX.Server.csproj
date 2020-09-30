@@ -13,11 +13,4 @@
         <ProjectReference Include="..\EventHorizon.Blazor.UX.Shared\EventHorizon.Blazor.UX.Shared.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Update="wwwroot\css\app.css">
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      </Content>
-    </ItemGroup>
-
 </Project>

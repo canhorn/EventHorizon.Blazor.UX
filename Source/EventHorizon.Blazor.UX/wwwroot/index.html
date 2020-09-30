@@ -11,8 +11,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link href="_content/EventHorizon.Blazor.UX.Controls/ehz-blazor-ux-theme.css" rel="stylesheet" />
-    <link href="css/theme.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="_content/EventHorizon.Blazor.UX.Shared/css/theme.css" rel="stylesheet" />
+    <link href="_content/EventHorizon.Blazor.UX.Shared/css/app.css" rel="stylesheet" />
     <link href="_framework/scoped.styles.css" rel="stylesheet" />
 
     <script type="text/javascript" src="hide-loading.js"></script>
@@ -24,14 +24,15 @@
     <div id="app">
     </div>
 
-    <div id="loading-overlay" style="color: #26dafd;
+    <div id="loading-overlay" style="
+        color: #26dafd;
         position: absolute;
         top: 0;
         bottom: 0px;
         width: 100%;
         text-align: center;
         background-color: black;
-        background-image: url(/image/background.png);
+        background-image: url(/_content/EventHorizon.Blazor.UX.Shared/image/background.png);
         z-index: 9999;
     ">
         <div style="display: grid; height: 100%; text-align: center; vertical-align: middle;">

@@ -22,6 +22,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\EventHorizon.Blazor.UX.Controls\EventHorizon.Blazor.UX.Controls.csproj" />
+        <ProjectReference Include="..\EventHorizon.Blazor.UX.Shared\EventHorizon.Blazor.UX.Shared.csproj" />
     </ItemGroup>
 
 </Project>

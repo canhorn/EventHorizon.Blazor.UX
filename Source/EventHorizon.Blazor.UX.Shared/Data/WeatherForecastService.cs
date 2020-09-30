@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EventHorizon.Blazor.UX.Server.Data
+namespace EventHorizon.Blazor.UX.Shared.Data
 {
     public class WeatherForecastService
     {
@@ -18,7 +18,7 @@ namespace EventHorizon.Blazor.UX.Server.Data
             {
                 Date = startDate.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                Summary = Summaries[rng.Next(Summaries.Length)],
             }).ToArray());
         }
     }

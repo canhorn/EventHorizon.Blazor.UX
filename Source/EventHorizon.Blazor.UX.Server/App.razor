@@ -1,5 +1,5 @@
 <ThemeProvider>
-    <Router AppAssembly="@typeof(Program).Assembly">
+    <Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(EventHorizon.Blazor.UX.Shared.Pages.Index).Assembly }">
         <Found Context="routeData">
             <LayoutView Layout="@typeof(MainLayout)">
                 <TransitionableRoutePrimary RouteData="@routeData">

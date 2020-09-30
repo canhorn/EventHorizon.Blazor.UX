@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using EventHorizon.Blazor.UX.Server.Data;
-using EventHorizon.Blazor.UX.Server.Shared;
+using EventHorizon.Blazor.UX.Shared.Layout;
+using EventHorizon.Blazor.UX.Shared.Data;
 
 namespace EventHorizon.Blazor.UX.Server
 {

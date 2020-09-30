@@ -1,6 +1,6 @@
 using System;
 
-namespace EventHorizon.Blazor.UX.Server.Data
+namespace EventHorizon.Blazor.UX.Shared.Data
 {
     public class WeatherForecast
     {
