@@ -1,8 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using BlazorTransitionableRoute;
 using Microsoft.JSInterop;
 
-namespace EventHorizon.Blazor.UX.Shared
+namespace EventHorizon.Blazor.UX.Server.Shared
 {
     public class RouteTransitionInvoker : IRouteTransitionInvoker
     {
@@ -16,12 +19,12 @@ namespace EventHorizon.Blazor.UX.Shared
         }
 
         public async Task InvokeRouteTransitionAsync(
-            bool isBackwards
+            bool backwards
         )
         {
             await _jsRuntime.InvokeVoidAsync(
                 "window.ehzBlazorUx.transitionFunction",
-                isBackwards
+                backwards
             );
         }
     }

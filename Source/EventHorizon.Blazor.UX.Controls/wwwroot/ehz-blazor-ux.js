@@ -14,6 +14,8 @@
         let transitionIn = document.getElementsByClassName('transition-in')[0];
         let transitionOut = document.getElementsByClassName('transition-out')[0];
 
+        console.log({ transitionIn, transitionOut })
+
         if (transitionIn && transitionOut) {
             const handle_transitionOut_onanimationend = function (event) {
                 clearTimeout(transitionOutEndHandler);

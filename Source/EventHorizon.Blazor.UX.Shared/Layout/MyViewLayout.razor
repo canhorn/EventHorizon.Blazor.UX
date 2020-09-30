@@ -9,7 +9,7 @@
     [CascadingParameter]
     public Transition Transition { get; set; }
 
-    private string transitioningClass => !Transition.FirstRender 
+    private string transitioningClass => !Transition.FirstRender
         ? (Transition.IntoView ? "transition-in transitioning" : "transition-out transitioning")
         : "";
 }

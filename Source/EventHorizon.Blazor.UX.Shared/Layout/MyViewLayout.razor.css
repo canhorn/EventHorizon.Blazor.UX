@@ -1,0 +1,19 @@
+.view-content {
+    padding-left: 2rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.transition-in {
+    opacity: 0;
+}
+
+.transitioning {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+}
+
+.transition-display-none {
+    display: none;
+}

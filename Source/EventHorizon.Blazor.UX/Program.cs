@@ -20,8 +20,6 @@ namespace EventHorizon.Blazor.UX
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-            builder.Services.AddScoped<BlazorTransitionableRoute.NavigationState>();
-            builder.Services.AddScoped<BlazorTransitionableRoute.NavigationStateHandler>();
             builder.Services.AddScoped<BlazorTransitionableRoute.IRouteTransitionInvoker, RouteTransitionInvoker>();
 
             await builder.Build().RunAsync();
