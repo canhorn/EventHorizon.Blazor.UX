@@ -2,7 +2,7 @@
     --font-family: "Electrolize", "sans-serif";
     --main-foreground-color: #26dafd;
     --main-background-color: black;
-    --main-background-image: url(/image/background.png);
+    --main-background-image: url(/_content/EventHorizon.Blazor.UX.Shared/image/background.png);
     --main-foreground-shadow-color: #26dafda6;
     --main-accent-color: #d6d5d5;
     /* Scrollbar Styles */

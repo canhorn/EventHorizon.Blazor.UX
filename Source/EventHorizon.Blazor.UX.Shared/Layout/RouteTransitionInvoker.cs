@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using BlazorTransitionableRoute;
 using Microsoft.JSInterop;
 
-namespace EventHorizon.Blazor.UX.Shared
+namespace EventHorizon.Blazor.UX.Shared.Layout
 {
     public class RouteTransitionInvoker : IRouteTransitionInvoker
     {
@@ -19,13 +19,12 @@ namespace EventHorizon.Blazor.UX.Shared
         }
 
         public async Task InvokeRouteTransitionAsync(
-            BrowserNavigationDirection navigationDirection
+            bool backwards
         )
         {
-            var isNavigatingBack = navigationDirection == BrowserNavigationDirection.Backward;
             await _jsRuntime.InvokeVoidAsync(
                 "window.ehzBlazorUx.transitionFunction",
-                isNavigatingBack
+                backwards
             );
         }
     }

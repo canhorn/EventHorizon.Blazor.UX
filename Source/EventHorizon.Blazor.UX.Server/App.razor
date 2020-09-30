@@ -1,4 +1,4 @@
-﻿<ThemeProvider>
+<ThemeProvider>
     <Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(EventHorizon.Blazor.UX.Shared.Pages.Index).Assembly }">
         <Found Context="routeData">
             <LayoutView Layout="@typeof(MainLayout)">
@@ -17,17 +17,3 @@
         </NotFound>
     </Router>
 </ThemeProvider>
-
-@code {
-    [Inject]
-    public IJSRuntime JSRuntime { get; set; }
-    protected override async Task OnAfterRenderAsync(
-        bool firstRender
-    )
-    {
-        if (firstRender)
-        {
-            await JSRuntime.InvokeVoidAsync("hideLoading");
-        }
-    }
-}
