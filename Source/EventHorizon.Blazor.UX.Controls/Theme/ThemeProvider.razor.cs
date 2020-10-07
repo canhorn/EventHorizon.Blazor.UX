@@ -15,7 +15,10 @@
         public RenderFragment ChildContent { get; set; }
 
         [Parameter]
-        public IDictionary<string, string> Theme { get; set; } = new Dictionary<string, string>();
+        public IDictionary<string, string> Theme { get; set; } = new Dictionary<string, string>
+        {
+            //{"--main-foreground-color", "white" }
+        };
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {

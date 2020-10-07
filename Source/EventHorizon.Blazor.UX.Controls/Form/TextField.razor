@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits TextFieldModel
+
+<div class="text-field @(disabled ? "--disabled" : string.Empty)">
+    <InputText id="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)"
+               name="@(!string.IsNullOrWhiteSpace(name) ? name : Uid)"
+               class="@($"text-field__element {@class} {(string.IsNullOrWhiteSpace(Value) ? "--empty-value" : string.Empty)} --transition")"
+               disabled="@disabled"
+               @bind-Value="Value"
+               @attributes="Attributes"></InputText>
+    <label class="text-field__label --transition"
+           for="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)">
+        @LabelDisplay
+    </label>
+    <span class="text-field__underline --transition"></span>
+</div>

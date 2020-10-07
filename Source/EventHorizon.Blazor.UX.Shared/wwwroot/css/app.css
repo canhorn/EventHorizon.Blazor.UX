@@ -29,37 +29,6 @@ html, body {
         top: 0.5rem;
     }
 
-/* Controls */
-a.link {
-    color: var(--main-foreground-color);
-    cursor: pointer;
-    transition: color 250ms ease-out;
-    text-shadow: 0 0 4px var(--main-foreground-shadow-color);
-}
-
-.top-row a.link {
-    text-decoration: none;
-}
-
-/*Scroll Bar Customization */
-::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--scrollbar-thumb-track-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb-thumb-color);
-    border: 1px solid var(--scrollbar-thumb-border-color);
-    transition: border 500ms ease-in;
-}
-
-    ::-webkit-scrollbar-thumb:hover {
-        border: 1px solid var(--scrollbar-thumb-border-hover-color);
-    }
 
 /* Loading Component */
 .hide-loading {

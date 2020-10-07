@@ -51,18 +51,22 @@ button.button__element {
     border: 1px solid var(--button-border-color);
 }
 
+    button.button__element:focus {
+        border: 1px solid var(--button-border-hover-color);
+    }
+
 .button__background:hover .button__corner {
-    background-color: var(--button-corner-background-color);
+    background-color: var(--button-corner-background-hover-color);
     opacity: 0.65;
 }
 
 .button__element:focus ~ .button__corner {
-    background-color: var(--button-corner-background-color);
+    background-color: var(--button-corner-background-hover-color);
     opacity: 0.65;
 }
 
 .button__corner {
-    background-color: inherit;
+    background-color: var(--button-corner-background-color);
     height: 8px;
     width: 8px;
 }
@@ -90,3 +94,8 @@ button.button__element {
         top: 0px;
         right: 0px;
     }
+
+.--animate .button__corner.--transition {
+    -webkit-transition: all calc(var(--default-animation-speed) / 4) ease-out;
+    transition: all calc(var(--default-animation-speed) / 4) ease-out;
+}

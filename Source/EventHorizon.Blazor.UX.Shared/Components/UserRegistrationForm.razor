@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.Extensions.Logging
+
+<h3>Example User Registration Form</h3>
+
+<EditForm Model="this" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <TextField @bind-Value="UserName"
+               LabelDisplay="User Name" />
+
+    <Animate>
+        <TextField @bind-Value="AnimatedUserName"
+                   LabelDisplay="Animated User Name" />
+    </Animate>
+
+    <TextField @bind-Value="DisabledFirstName"
+               disabled="true"
+               LabelDisplay="First Name" />
+
+    <Animate>
+        <TextField @bind-Value="AnimatedDisabledFirstName"
+                   disabled="true"
+                   LabelDisplay="Animated Disabled First Name" />
+    </Animate>
+
+    <Button type="submit">Submit</Button>
+    @Message
+</EditForm>
+
+@code {
+    [System.ComponentModel.DataAnnotations.Required]
+    public string UserName { get; set; }
+    [System.ComponentModel.DataAnnotations.Required]
+    public string AnimatedUserName { get; set; }
+    public string DisabledFirstName { get; set; } = "I am Disabled";
+    public string AnimatedDisabledFirstName { get; set; } = "I am Disabled";
+
+    public string Message { get; set; } = string.Empty;
+
+    [Inject]
+    ILogger<UserRegistrationForm> Logger { get; set; }
+
+    private void HandleValidSubmit()
+    {
+        Message = $"Submitted Form : {UserName} | {AnimatedUserName}";
+    }
+}
