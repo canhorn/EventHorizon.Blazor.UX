@@ -3,12 +3,9 @@
 <div class="button @Animation">
     <div class="button__background">
         <button class="button__element" @onclick="HandleOnClick" @attributes="Attributes">@ChildContent</button>
-        <div class="button__corner --bottom-left"></div>
-        <div class="button__corner --bottom-right"></div>
-        <div class="button__corner --top-left"></div>
-        <div class="button__corner --top-right"></div>
+        <div class="button__corner --bottom-left --transition"></div>
+        <div class="button__corner --bottom-right --transition"></div>
+        <div class="button__corner --top-left --transition"></div>
+        <div class="button__corner --top-right --transition"></div>
     </div>
 </div>
-
-@code {
-}

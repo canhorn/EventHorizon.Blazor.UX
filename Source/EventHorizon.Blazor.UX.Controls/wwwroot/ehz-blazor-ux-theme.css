@@ -1,15 +1,80 @@
 ﻿:root {
+    --default-animation-speed: 1000ms;
     --font-family: "Electrolize", "sans-serif";
+    --main-foreground-color: #26dafd;
+    --main-background-color: black;
+    --main-background-image: url(/_content/EventHorizon.Blazor.UX.Shared/image/background.png);
+    --main-foreground-shadow-color: #26dafda6;
+    --main-accent-color: #d6d5d5;
+    /* Scrollbar Styles */
+    --scrollbar-thumb-track-color: #151515;
+    --scrollbar-thumb-thumb-color: black;
+    --scrollbar-thumb-border-color: rgba(172,249,251,0.65);
+    --scrollbar-thumb-border-hover-color: rgba(172,249,251,0.95);
     /* Button Styles */
-    --button-color: #26dafd;
+    --button-color: var(--main-foreground-color);
     --button-background-color: rgba(6, 43, 45, 0.65);
     --button-blink-color: white;
-    --button-border-color: rgba(6, 43, 45, 0.65);
-    --button-corner-background-color: #26dafd;
+    --button-border-color: var(--main-foreground-color);
+    --button-border-hover-color: var(--main-accent-color);
+    --button-corner-background-color: var(--main-foreground-color);
+    --button-corner-background-hover-color: var(--main-accent-color);
     /* Link Styles */
     --link-color: #acf9fb;
     --link-shadow-color: rgba(172,249,251,0.65);
     /* Table Styles */
     --table-head-color: #a1ecfb;
     --table-row-color: rgba(2,157,187,0.325);
+    /* Form - Text Field Styles*/
+    --form-text-field-input-color: var(--main-accent-color);
+    --form-text-field-input-border-color: var(--main-foreground-color);
+    --form-text-field-input-focused-color: rgba(251, 249, 251,0.30);
+    --form-text-field-label-color: var(--main-foreground-color);
+    --form-text-field-label-shadow-color: var(--main-foreground-color);
+    --form-text-field-label-focused-color: var(--main-accent-color);
+    --form-text-field-underline-color: var(--main-accent-color);
 }
+
+@media print, (prefers-reduced-motion: reduce) {
+    .--animate,
+    .--animate .--transition {
+        -webkit-animation-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        -webkit-transition-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Controls */
+a.link {
+    color: var(--link-color);
+    cursor: pointer;
+    transition: color 250ms ease-out;
+    text-shadow: 0 0 4px var(--link-shadow-color);
+}
+
+.top-row a.link {
+    text-decoration: none;
+}
+
+/*Scroll Bar Customization */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-thumb-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-thumb-color);
+    border: 1px solid var(--scrollbar-thumb-border-color);
+    transition: border 500ms ease-in;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        border: 1px solid var(--scrollbar-thumb-border-hover-color);
+    }
