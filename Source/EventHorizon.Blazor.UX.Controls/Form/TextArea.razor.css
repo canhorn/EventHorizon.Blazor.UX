@@ -1,0 +1,84 @@
+﻿.text-area {
+    margin: 1rem;
+    padding-top: 0.3rem;
+    position: relative;
+    width: 100%;
+}
+
+    .text-area.--disabled {
+        background: #d6d5d5a6;
+    }
+
+        .text-area.--disabled ::deep .text-area__element {
+            cursor: not-allowed;
+        }
+
+.text-area__label {
+    color: var(--form-text-area-label-color);
+    text-shadow: 0 0 4px var(--form-text-area-label-shadow-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.3rem;
+    cursor: text;
+    z-index: 10;
+}
+
+.--animate .text-area__label.--transition {
+    -webkit-transition: all calc(var(--default-animation-speed) / 4) ease-out;
+    transition: all calc(var(--default-animation-speed) / 4) ease-out;
+}
+
+::deep .text-area__element {
+    color: var(--form-text-area-input-color);
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.3rem;
+    font-size: 14px;
+    background: none;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--form-text-area-input-border-color);
+    border-radius: 0;
+    -webkit-appearance: none;
+    resize: vertical;
+}
+
+    ::deep .text-area__element:focus {
+        background: var(--form-text-area-input-focused-color);
+    }
+
+::deep .--animate .text-area__element.--transition:focus {
+    -webkit-transition: all calc(var(--default-animation-speed) / 4) ease-out;
+    transition: all calc(var(--default-animation-speed) / 4) ease-out;
+}
+
+::deep .text-area__element:focus ~ .text-area__label,
+::deep .text-area__element:not(.--empty-value) ~ .text-area__label {
+    color: var(--form-text-area-label-focused-color);
+    text-shadow: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    font-size: 0.825em;
+    cursor: default;
+}
+
+::deep .text-area__element:focus ~ .text-area__underline {
+    width: 100%;
+}
+
+.text-area__underline {
+    background: var(--form-text-area-underline-color);
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+}
+
+.--animate .text-area__underline.--transition {
+    -webkit-transition: all calc(var(--default-animation-speed) / 4) ease-out;
+    transition: all calc(var(--default-animation-speed) / 4) ease-out;
+}

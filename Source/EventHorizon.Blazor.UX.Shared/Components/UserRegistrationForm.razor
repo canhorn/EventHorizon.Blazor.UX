@@ -25,8 +25,31 @@
                    LabelDisplay="Animated Disabled First Name" />
     </Animate>
 
+    <TextArea @bind-Value="About"
+              LabelDisplay="About" />
+
+    <Animate>
+        <TextArea @bind-Value="AnimatedAbout"
+                  LabelDisplay="Animated About" />
+    </Animate>
+
+    <TextArea @bind-Value="DisabledAbout"
+              disabled="true"
+              rows="1"
+              LabelDisplay="About" />
+
+    <Animate>
+        <TextArea @bind-Value="AnimatedDisabledAbout"
+                  disabled="true"
+                  rows="1"
+                  LabelDisplay="Animated Disabled About" />
+    </Animate>
+
     <Button type="submit">Submit</Button>
-    @Message
+    @foreach (var message in Messages)
+    {
+        <div>@message</div>
+    }
 </EditForm>
 
 @code {
@@ -37,13 +60,37 @@
     public string DisabledFirstName { get; set; } = "I am Disabled";
     public string AnimatedDisabledFirstName { get; set; } = "I am Disabled";
 
-    public string Message { get; set; } = string.Empty;
+    [System.ComponentModel.DataAnnotations.Required]
+    public string About { get; set; }
+    [System.ComponentModel.DataAnnotations.Required]
+    public string AnimatedAbout { get; set; }
+    public string DisabledAbout { get; set; } = "I am Disabled - About";
+    public string AnimatedDisabledAbout { get; set; } = "I am Disabled - About";
+
+    public IList<string> Messages { get; set; } = new List<string>();
 
     [Inject]
     ILogger<UserRegistrationForm> Logger { get; set; }
 
     private void HandleValidSubmit()
     {
-        Message = $"Submitted Form : {UserName} | {AnimatedUserName}";
+        Messages = new List<string>
+        {
+            "Submitted Form:",
+            $"|  UserName = {UserName}",
+            $"|  AnimatedUserName = {AnimatedUserName}",
+        };
+        Messages.Add("|  About = ");
+        var aboutSplit = About.Split("\n");
+        foreach (var aboutSplitItem in aboutSplit)
+        {
+            Messages.Add($"|  > {aboutSplitItem}");
+        }
+        Messages.Add("|  AnimatedAbout = ");
+        var animatedAboutSplit = AnimatedAbout.Split("\n");
+        foreach (var animatedAboutSplitItem in animatedAboutSplit)
+        {
+            Messages.Add($"|  > {animatedAboutSplitItem}");
+        }
     }
 }
