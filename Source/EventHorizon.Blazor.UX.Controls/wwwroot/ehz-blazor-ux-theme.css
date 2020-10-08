@@ -6,6 +6,7 @@
     --main-background-image: url(/_content/EventHorizon.Blazor.UX.Shared/image/background.png);
     --main-foreground-shadow-color: #26dafda6;
     --main-accent-color: #d6d5d5;
+    --main-accent-shadow-color: #26dafda6;
     /* Scrollbar Styles */
     --scrollbar-thumb-track-color: #151515;
     --scrollbar-thumb-thumb-color: black;
@@ -33,6 +34,14 @@
     --form-text-field-label-shadow-color: var(--main-foreground-color);
     --form-text-field-label-focused-color: var(--main-accent-color);
     --form-text-field-underline-color: var(--main-accent-color);
+    /* Form - Text Area Styles*/
+    --form-text-area-input-color: var(--main-accent-color);
+    --form-text-area-input-border-color: var(--main-foreground-color);
+    --form-text-area-input-focused-color: rgba(251, 249, 251,0.30);
+    --form-text-area-label-color: var(--main-foreground-color);
+    --form-text-area-label-shadow-color: var(--main-foreground-color);
+    --form-text-area-label-focused-color: var(--main-accent-color);
+    --form-text-area-underline-color: var(--main-accent-color);
 }
 
 @media print, (prefers-reduced-motion: reduce) {
@@ -59,13 +68,17 @@ a.link {
     text-decoration: none;
 }
 
-/*Scroll Bar Customization */
+/* Scroll Bar Styles */
 ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
 }
 
 ::-webkit-scrollbar-track {
+    background: var(--scrollbar-thumb-track-color);
+}
+
+::-webkit-scrollbar-corner {
     background: var(--scrollbar-thumb-track-color);
 }
 
@@ -78,3 +91,9 @@ a.link {
     ::-webkit-scrollbar-thumb:hover {
         border: 1px solid var(--scrollbar-thumb-border-hover-color);
     }
+
+/* Resizer Styles */
+::-webkit-resizer {
+    background-color: var(--main-accent-shadow-color);
+    border-radius: 70%;
+}

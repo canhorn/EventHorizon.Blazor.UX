@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits TextAreaModel
+
+<div class="text-area @(disabled ? "--disabled" : string.Empty)">
+    <InputTextArea id="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)"
+                   name="@(!string.IsNullOrWhiteSpace(name) ? name : Uid)"
+                   class="@($"text-area__element {@class} {(string.IsNullOrWhiteSpace(Value) ? "--empty-value" : string.Empty)} --transition")"
+                   disabled="@disabled"
+                   rows="@rows"
+                   @bind-Value="Value"
+                   @attributes="Attributes"></InputTextArea>
+    <label class="text-area__label --transition"
+           for="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)">
+        @LabelDisplay
+    </label>
+    <span class="text-area__underline --transition"></span>
+</div>
