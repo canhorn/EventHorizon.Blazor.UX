@@ -16,10 +16,6 @@ jobs:
       uses: gittools/actions/gitversion/setup@v0.9.4
       with:
         versionSpec: '5.3.x'
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '5.0.100-rc.1.20452.10'
     - name: Execute GitVersion - updateAssemblyInfo
       id: gitversion
       uses: gittools/actions/gitversion/execute@v0.9.4
@@ -33,6 +29,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CUSTOM_TAG: ${{ steps.gitversion.outputs.NuGetVersionV2 }}
         RELEASE_BRANCHES: main
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.100-rc.1.20452.10'
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Pack with dotnet
