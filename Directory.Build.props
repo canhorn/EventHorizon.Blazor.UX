@@ -1,0 +1,9 @@
+<Project>
+    <PropertyGroup>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>Cody Merritt Anhorn</Authors>
+        <PackageProjectUrl>https://github.com/canhorn/EventHorizon.Blazor.UX</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/canhorn/EventHorizon.Blazor.UX</RepositoryUrl>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    </PropertyGroup>
+</Project>

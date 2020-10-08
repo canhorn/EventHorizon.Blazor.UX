@@ -2,6 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+
+        <AssemblyTitle>EventHorizon.Blazor.UX</AssemblyTitle>
+        <AssemblyName>EventHorizon.Blazor.UX</AssemblyName>
+        <PackageId>EventHorizon.Blazor.UX</PackageId>
+
+        <Description>A collection of Components for use with ASP.NET Core Blazor.</Description>
+        <PackageTags>ASPNETCore, Blazor, Components, EventHorizon</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
