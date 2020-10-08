@@ -1,4 +1,4 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Table
+﻿namespace EventHorizon.Blazor.UX.Table
 {
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Components;

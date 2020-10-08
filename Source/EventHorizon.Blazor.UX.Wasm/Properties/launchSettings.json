@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "EventHorizon.Blazor.UX": {
+    "EventHorizon.Blazor.UX.Wasm": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

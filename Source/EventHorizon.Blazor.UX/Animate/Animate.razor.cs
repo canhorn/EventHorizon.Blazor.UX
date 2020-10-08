@@ -1,4 +1,4 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Animate
+﻿namespace EventHorizon.Blazor.UX.Animate
 {
     using Microsoft.AspNetCore.Components;
 

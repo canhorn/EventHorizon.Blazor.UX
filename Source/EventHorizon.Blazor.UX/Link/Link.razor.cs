@@ -1,4 +1,4 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Link
+﻿namespace EventHorizon.Blazor.UX.Link
 {
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Components;
