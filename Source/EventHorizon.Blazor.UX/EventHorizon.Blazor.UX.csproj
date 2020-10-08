@@ -1,28 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
     </PropertyGroup>
 
     <ItemGroup>
-        <Watch Include="**\*.css" Exclude="obj\**\*;bin\**\*" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="BlazorTransitionableRoute" Version="2.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0-rc.1.*" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0-rc.1.*" PrivateAssets="all" />
-        <PackageReference Include="System.Net.Http.Json" Version="5.0.0-rc.1.*" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\EventHorizon.Blazor.UX.Controls\EventHorizon.Blazor.UX.Controls.csproj" />
-        <ProjectReference Include="..\EventHorizon.Blazor.UX.Shared\EventHorizon.Blazor.UX.Shared.csproj" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0-rc.1.*" />
     </ItemGroup>
 
 </Project>

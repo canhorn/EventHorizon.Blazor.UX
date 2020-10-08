@@ -1,4 +1,4 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Button
+﻿namespace EventHorizon.Blazor.UX.Button
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -17,7 +17,7 @@
         [Parameter]
         public RenderFragment ChildContent { get; set; }
         [Parameter]
-        public string SoundPath { get; set; } = "/_content/EventHorizon.Blazor.UX.Controls/sounds/click.mp3";
+        public string SoundPath { get; set; } = "/_content/EventHorizon.Blazor.UX/sounds/click.mp3";
         [Parameter(CaptureUnmatchedValues = true)]
         public IDictionary<string, object> Attributes { get; set; }
 

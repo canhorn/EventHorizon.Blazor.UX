@@ -1,4 +1,4 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Theme
+﻿namespace EventHorizon.Blazor.UX.Theme
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;

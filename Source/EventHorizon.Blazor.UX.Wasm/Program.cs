@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using EventHorizon.Blazor.UX.Shared.Layout;
 using EventHorizon.Blazor.UX.Shared.Data;
 
-namespace EventHorizon.Blazor.UX
+namespace EventHorizon.Blazor.UX.Wasm
 {
     public class Program
     {

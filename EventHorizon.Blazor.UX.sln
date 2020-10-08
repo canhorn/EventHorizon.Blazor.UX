@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30420.98
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{26B63EE2-64F5-4911-A71F-7530917E5446}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.UX", "Source\EventHorizon.Blazor.UX\EventHorizon.Blazor.UX.csproj", "{D58F4F93-BA57-42E2-990D-D5F650951B7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.UX.Wasm", "Source\EventHorizon.Blazor.UX.Wasm\EventHorizon.Blazor.UX.Wasm.csproj", "{D58F4F93-BA57-42E2-990D-D5F650951B7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.UX.Controls", "Source\EventHorizon.Blazor.UX.Controls\EventHorizon.Blazor.UX.Controls.csproj", "{4F956A02-2EF3-4DA3-8C1D-5A2BA093F66D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHorizon.Blazor.UX", "Source\EventHorizon.Blazor.UX\EventHorizon.Blazor.UX.csproj", "{4F956A02-2EF3-4DA3-8C1D-5A2BA093F66D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA463E7F-425D-4C40-830E-6761BD09A4F5}"
 	ProjectSection(SolutionItems) = preProject

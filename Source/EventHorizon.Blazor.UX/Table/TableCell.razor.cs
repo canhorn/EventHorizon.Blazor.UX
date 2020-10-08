@@ -1,9 +1,9 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Table
+﻿namespace EventHorizon.Blazor.UX.Table
 {
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Components;
 
-    public class TableRowModel
+    public class TableCellModel
         : ComponentBase
     {
         [Parameter]

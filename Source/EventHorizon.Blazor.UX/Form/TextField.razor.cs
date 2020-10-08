@@ -1,10 +1,10 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Form
+﻿namespace EventHorizon.Blazor.UX.Form
 {
     using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Components;
 
-    public class TextAreaModel
+    public class TextFieldModel
         : ComponentBase
     {
         [Parameter]
@@ -26,15 +26,11 @@
             {
                 if (_value == value) return;
                 _value = value;
-                ValueChanged.InvokeAsync(
-                    value
-                );
+                ValueChanged.InvokeAsync(value);
             }
         }
         [Parameter]
         public EventCallback<string> ValueChanged { get; set; }
-        [Parameter]
-        public int rows { get; set; } = 3;
         [Parameter(CaptureUnmatchedValues = true)]
         public IDictionary<string, object> Attributes { get; set; }
 

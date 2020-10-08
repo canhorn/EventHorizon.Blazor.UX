@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: .NET Publish
-      run: dotnet publish --configuration Release -o published ./Source/EventHorizon.Blazor.UX/EventHorizon.Blazor.UX.csproj 
+      run: dotnet publish --configuration Release -o published ./Source/EventHorizon.Blazor.UX.Wasm/EventHorizon.Blazor.UX.Wasm.csproj 
     - name: Publish Static Site
       id: builddeploy
       uses: Azure/static-web-apps-deploy@v0.0.1-preview

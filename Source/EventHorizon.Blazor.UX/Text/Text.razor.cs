@@ -1,4 +1,4 @@
-﻿namespace EventHorizon.Blazor.UX.Controls.Text
+﻿namespace EventHorizon.Blazor.UX.Text
 {
     using Microsoft.AspNetCore.Components;
 

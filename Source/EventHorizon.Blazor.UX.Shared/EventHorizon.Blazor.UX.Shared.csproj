@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\EventHorizon.Blazor.UX.Controls\EventHorizon.Blazor.UX.Controls.csproj" />
+        <ProjectReference Include="..\EventHorizon.Blazor.UX\EventHorizon.Blazor.UX.csproj" />
     </ItemGroup>
 
 </Project>
