@@ -7,6 +7,7 @@
     --main-foreground-shadow-color: #26dafda6;
     --main-accent-color: #d6d5d5;
     --main-accent-shadow-color: #26dafda6;
+    --disabled-background-color: #d6d5d5a6;
     /* Scrollbar Styles */
     --scrollbar-thumb-track-color: #151515;
     --scrollbar-thumb-thumb-color: black;
@@ -34,6 +35,7 @@
     --form-text-field-label-shadow-color: var(--main-foreground-color);
     --form-text-field-label-focused-color: var(--main-accent-color);
     --form-text-field-underline-color: var(--main-accent-color);
+    --form-text-field-disabled-background-color: var(--disabled-background-color);
     /* Form - Text Area Styles*/
     --form-text-area-input-color: var(--main-accent-color);
     --form-text-area-input-border-color: var(--main-foreground-color);
@@ -42,6 +44,7 @@
     --form-text-area-label-shadow-color: var(--main-foreground-color);
     --form-text-area-label-focused-color: var(--main-accent-color);
     --form-text-area-underline-color: var(--main-accent-color);
+    --form-text-area-disabled-background-color: var(--disabled-background-color);
 }
 
 @media print, (prefers-reduced-motion: reduce) {
