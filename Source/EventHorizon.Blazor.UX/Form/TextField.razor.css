@@ -1,17 +1,13 @@
 ﻿.text-field {
-    margin: 1rem;
-    padding-top: 0.3rem;
+    margin: 1.3rem 1rem;
+    padding-top: 0.2rem;
     position: relative;
-    width: 100%;
 }
 
-    .text-field.--disabled {
-        background: #d6d5d5a6;
+    .text-field.--disabled ::deep .text-field__element {
+        cursor: not-allowed;
+        background: var(--form-text-field-disabled-background-color);
     }
-
-        .text-field.--disabled ::deep .text-field__element {
-            cursor: not-allowed;
-        }
 
 .text-field__label {
     color: var(--form-text-field-label-color);
@@ -43,6 +39,7 @@
     border-bottom: 1px solid var(--form-text-field-input-border-color);
     border-radius: 0;
     -webkit-appearance: none;
+    padding: 0.4rem;
 }
 
     ::deep .text-field__element:focus {

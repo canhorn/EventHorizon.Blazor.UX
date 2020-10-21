@@ -1,17 +1,13 @@
 ﻿.text-area {
-    margin: 1rem;
-    padding-top: 0.3rem;
+    margin: 1.3rem 1rem;
+    padding-top: 0.2rem;
     position: relative;
-    width: 100%;
 }
 
-    .text-area.--disabled {
-        background: #d6d5d5a6;
+    .text-area.--disabled ::deep .text-area__element {
+        cursor: not-allowed;
+        background: var(--form-text-area-disabled-background-color);
     }
-
-        .text-area.--disabled ::deep .text-area__element {
-            cursor: not-allowed;
-        }
 
 .text-area__label {
     color: var(--form-text-area-label-color);
@@ -19,7 +15,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    line-height: 1.3rem;
+    line-height: 1.9rem;
     cursor: text;
     z-index: 10;
 }
@@ -42,6 +38,7 @@
     border-radius: 0;
     -webkit-appearance: none;
     resize: vertical;
+    padding: 0.4rem;
 }
 
     ::deep .text-area__element:focus {
