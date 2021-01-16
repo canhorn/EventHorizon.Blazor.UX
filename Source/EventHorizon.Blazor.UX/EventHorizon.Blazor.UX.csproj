@@ -12,6 +12,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Form\SelectBox.razor.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Form\SelectBox.razor.css" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0-rc.2.*" />
     </ItemGroup>
 

@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Components.Forms
-@inherits TextAreaModel
+﻿@inherits TextAreaModel
 
 <div class="text-area @(disabled ? "--disabled" : string.Empty)">
     <InputTextArea id="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)"

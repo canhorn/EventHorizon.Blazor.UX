@@ -1,0 +1,16 @@
+﻿@inherits SelectBoxModel
+
+<div class="select-box @(disabled ? "--disabled" : string.Empty)">
+    <label class="select-box__label --transition"
+           for="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)">
+        @LabelDisplay
+    </label>
+    <InputSelect class="@($"select-box__element {@class} --transition")"
+                 @bind-Value="TextValue"
+                 disabled="@IsDisabled">
+        @foreach (var option in Options)
+        {
+            <option value="@option.Value">@option.Text</option>
+        }
+    </InputSelect>
+</div>

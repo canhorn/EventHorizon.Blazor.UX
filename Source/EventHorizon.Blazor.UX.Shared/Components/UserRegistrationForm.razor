@@ -7,6 +7,7 @@
     <DataAnnotationsValidator />
     <ValidationSummary />
 
+    @* Text Field Examples *@
     <TextField @bind-Value="UserName"
                LabelDisplay="User Name" />
 
@@ -25,6 +26,7 @@
                    LabelDisplay="Animated Disabled First Name" />
     </Animate>
 
+    @* Text Area Examples *@
     <TextArea @bind-Value="About"
               LabelDisplay="About" />
 
@@ -44,6 +46,16 @@
                   rows="1"
                   LabelDisplay="Animated Disabled About" />
     </Animate>
+
+    @* Select Box Examples *@
+    <SelectBox Options="LocationOptions"
+               LabelDisplay="Location"
+               @bind-Value="SelectedLocationOption" />
+
+    <SelectBox Options="LocationOptions"
+               LabelDisplay="Disabled Location"
+               @bind-Value="SelectedLocationOption"
+               disabled="true" />
 
     <Button type="submit">Submit</Button>
     @foreach (var message in Messages)
@@ -66,6 +78,38 @@
     public string AnimatedAbout { get; set; }
     public string DisabledAbout { get; set; } = "I am Disabled - About";
     public string AnimatedDisabledAbout { get; set; } = "I am Disabled - About";
+
+    public IList<SelectBoxOption> LocationOptions { get; set; } = new List<SelectBoxOption>
+    {
+        new SelectBoxOption
+        {
+            Value = string.Empty,
+            Text = "Select a Location...",
+        },
+        new SelectBoxOption
+        {
+            Value = "here",
+            Text = "Here",
+        },
+        new SelectBoxOption
+        {
+            Value = "there",
+            Text = "There",
+        },
+        new SelectBoxOption
+        {
+            Value = "everywhere",
+            Text = "Everywhere",
+        },
+        new SelectBoxOption
+        {
+            Value = "no_where",
+            Text = "No Where",
+        },
+    };
+    [System.ComponentModel.DataAnnotations.Required]
+    public SelectBoxOption SelectedLocationOption { get; set; } = new SelectBoxOption();
+
 
     public IList<string> Messages { get; set; } = new List<string>();
 
@@ -92,5 +136,9 @@
         {
             Messages.Add($"|  > {animatedAboutSplitItem}");
         }
+
+        Messages.Add(
+            $"|  SelectedLocation = [({SelectedLocationOption.Value}) {SelectedLocationOption.Text}]"
+        );
     }
 }

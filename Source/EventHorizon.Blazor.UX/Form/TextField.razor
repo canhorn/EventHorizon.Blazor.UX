@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Components.Forms
-@inherits TextFieldModel
+﻿@inherits TextFieldModel
 
 <div class="text-field @(disabled ? "--disabled" : string.Empty)">
     <InputText id="@(!string.IsNullOrWhiteSpace(id) ? id : Uid)"

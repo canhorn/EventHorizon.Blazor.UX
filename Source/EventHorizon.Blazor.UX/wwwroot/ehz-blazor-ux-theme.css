@@ -45,6 +45,18 @@
     --form-text-area-label-focused-color: var(--main-accent-color);
     --form-text-area-underline-color: var(--main-accent-color);
     --form-text-area-disabled-background-color: var(--disabled-background-color);
+    /* Form - Select Styles */
+    --form-select-color: var(--main-foreground-color);
+    --form-select-background-color: var(--main-background-color);
+    --form-select-border-color: var(--main-foreground-color);
+    --form-select-focus-color: rgba(251, 249, 251,0.30);
+    --form-select-shadow-color: rgba(251, 249, 251,0.30);
+    --form-select-border-hover-color: var(--main-foreground-color);
+    --form-select-background-disabled-color: var(--disabled-background-color);
+    --form-select-label-color: var(--main-accent-color);
+    --form-select-label-shadow-color: var(--main-foreground-color);
+    --form-select-option-foreground-color: var(--main-background-color);
+    --form-select-option-background-color: var(--main-accent-shadow-color);
 }
 
 @media print, (prefers-reduced-motion: reduce) {

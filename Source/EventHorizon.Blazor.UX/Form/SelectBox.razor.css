@@ -1,0 +1,60 @@
+﻿.select-box {
+    margin: 1.6rem 1rem 1.3rem 1rem;
+    padding-top: 0.2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .select-box.--disabled {
+        cursor: not-allowed;
+    }
+
+.select-box__label {
+    color: var(--form-select-label-color);
+    text-shadow: 0 0 4px var(--form-select-label-shadow-color);
+    position: absolute;
+    transform: translateY(-20px);
+}
+
+::deep .select-box__element {
+    color: var(--form-select-color);
+    background-color: var(--form-select-background-color);
+    border: 1px solid var(--form-select-border-color);
+    box-shadow: 0.1em 0.1em var(--form-select-shadow-color);
+    display: block;
+    font-size: inherit;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+    ::deep .select-box__element::-ms-expand {
+        display: none;
+    }
+
+    ::deep .select-box__element:hover {
+        border-color: var(--form-select-border-hover-color);
+    }
+
+    ::deep .select-box__element:focus {
+        background-color: var(--form-select-focus-color);
+    }
+
+    ::deep .select-box__element:disabled {
+        opacity: 1;
+        background-color: var(--form-select-background-disabled-color);
+        cursor: not-allowed;
+    }
+
+    ::deep .select-box__element option {
+        font-weight: normal;
+        color: var(--form-select-option-foreground-color);
+        background-color: var(--form-select-option-background-color);
+    }
