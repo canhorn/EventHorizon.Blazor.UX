@@ -54,6 +54,8 @@
                         a
                     )
                 )
+            ).Where(
+                a => a.Value != null
             ).ToDictionary(
                 a => a.Key,
                 a => a.Value
