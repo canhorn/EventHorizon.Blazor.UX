@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BlazorTransitionableRoute;
+﻿using BlazorTransitionableRoute;
 using Microsoft.JSInterop;
+using System.Threading.Tasks;
 
 namespace EventHorizon.Blazor.UX.Shared.Layout
 {
@@ -15,7 +12,7 @@ namespace EventHorizon.Blazor.UX.Shared.Layout
             IJSRuntime jsRuntime
         )
         {
-            this._jsRuntime = jsRuntime;
+            _jsRuntime = jsRuntime;
         }
 
         public async Task InvokeRouteTransitionAsync(
@@ -25,6 +22,14 @@ namespace EventHorizon.Blazor.UX.Shared.Layout
             await _jsRuntime.InvokeVoidAsync(
                 "window.ehzBlazorUx.transitionFunction",
                 backwards
+            );
+        }
+
+        public async Task InvokeRouteTransitionAsync(Transition transition)
+        {
+            await _jsRuntime.InvokeVoidAsync(
+                "window.ehzBlazorUx.transitionFunction",
+                transition.Backwards
             );
         }
     }

@@ -1,0 +1,70 @@
+﻿@inherits ComponentMockupModel
+
+<div class="mockup__canvas">
+    <h2 class="--sr-only">
+        @ComponentType.Name
+    </h2>
+    @if (Template is not null)
+    {
+        @Template(ComponentParametersWithDefaults)
+    }
+    else
+    {
+        <DynamicComponent Type="ComponentType"
+                          Parameters="ComponentParametersWithDefaults" />
+    }
+</div>
+
+<TabsArea>
+    <Tab Text="Docs">
+        <div class="documentation">
+            <Table>
+                <Head>
+                    <TableColumn>Name</TableColumn>
+                    <TableColumn>Description</TableColumn>
+                    <TableColumn>Type</TableColumn>
+                    <TableColumn>Default</TableColumn>
+                    <TableColumn>Property</TableColumn>
+                </Head>
+                <Body>
+                    @foreach (var doc in Documentation)
+                    {
+                        <TableRow>
+                            <TableCell>@doc.Name</TableCell>
+                            <TableCell>@doc.Description</TableCell>
+                            <TableCell>@doc.Type</TableCell>
+                            <TableCell>@doc.Default</TableCell>
+                            <TableCell>@doc.Property</TableCell>
+                        </TableRow>
+                    }
+                </Body>
+
+            </Table>
+        </div>
+    </Tab>
+    <Tab Text="Events">
+        <h2>EventCallback triggers will show here</h2>
+        @foreach (var triggeredEvent in TriggeredEventCallbackList)
+        {
+            <div>
+                <details>
+                    <summary>@triggeredEvent.Item1 | Argument Data</summary>
+                    <pre>
+                        @triggeredEvent.Item2
+                    </pre>
+                </details>
+            </div>
+        }
+    </Tab>
+    <Tab Text="Try It (Coming Soon)">
+        <h2>Coming Soon!</h2>
+        <h3>Try It Section! Edit the properties below to see the Canvas Above change!</h3>
+    </Tab>
+
+</TabsArea>
+
+
+@*<pre>
+    @DebuggingString
+    </pre>*@
+

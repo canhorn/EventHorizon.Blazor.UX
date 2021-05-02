@@ -1,0 +1,103 @@
+﻿@page "/mockup"
+@using EventHorizon.Blazor.Mockup
+
+<h1>Mockup Board</h1>
+
+<TabsArea Layout="TabsArea.TabsAreaLayoutType.Side">
+    <Tab Text="@(nameof(Button))">
+        <ComponentMockup ComponentType="@(typeof(Button))"
+                         Arguments="@(
+            new ComponentArgumentDetailsMap {
+                ["OnClick"] = new()
+                {
+                    Description = "This is the OnClick",
+                    DefaultValue = null,
+                },
+                ["ChildContent"] = new()
+                {
+                    Description = "The Label on the Button",
+                    DefaultValue = string.Empty,
+                    PropertyValue = "Click Me!",
+                },
+                ["Attributes"] = new()
+                {
+                    Description = "This is a catch all for any extra Parameters."
+                },
+            })" />
+    </Tab>
+
+    <Tab Text="@(nameof(Link))">
+        <ComponentMockup ComponentType="@(typeof(Link))"
+                         Arguments="@(
+            new ComponentArgumentDetailsMap {
+                ["class"] = new()
+                {
+                    Description = "The HTML class attribute, explict here since it also appends some more.",
+                    DefaultValue = null,
+                },
+                ["ChildContent"] = new()
+                {
+                    Description = "The Text of the Link.",
+                    DefaultValue = string.Empty,
+                    PropertyValue = "I am a Link",
+                },
+                ["Attributes"] = new()
+                {
+                    Description = "This is a catch all for any extra Parameters."
+                },
+            })" />
+    </Tab>
+
+    <Tab Text="@(nameof(Table))">
+        <ComponentMockup ComponentType="@(typeof(Table))"
+                         Arguments="@(
+            new ComponentArgumentDetailsMap {
+                ["OnClick"] = new()
+                {
+                    Description = "This is the OnClick",
+                    DefaultValue = null,
+                },
+                ["Attributes"] = new()
+                {
+                    Description = "This is a catch all for any extra Parameters."
+                }
+            })">
+            <Template>
+                <h3>I am using a Template!</h3>
+                <Table @attributes="context">
+                    <Head>
+                        <TableColumn>Name</TableColumn>
+                        <TableColumn>Description</TableColumn>
+                    </Head>
+                    <Body>
+                        <TableRow>
+                            <TableCell>Row 001 - Cell 001</TableCell>
+                            <TableCell>Row 001 - Cell 002</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Row 002 - Cell 001</TableCell>
+                            <TableCell>Row 002 - Cell 002</TableCell>
+                        </TableRow>
+                    </Body>
+                </Table>
+            </Template>
+        </ComponentMockup>
+    </Tab>
+
+    <Tab Text="@(nameof(Text))">
+        <ComponentMockup ComponentType="@(typeof(Text))"
+                         Arguments="@(
+            new ComponentArgumentDetailsMap {
+                ["ChildContent"] = new()
+                {
+                    Description = "The Text that is displayed.",
+                    DefaultValue = string.Empty,
+                    PropertyValue = "I am Text!",
+                },
+            })" />
+    </Tab>
+</TabsArea>
+@*<ComponentMockup ComponentType="@(typeof(SelectBox))" />
+    <ComponentMockup ComponentType="@(typeof(TextArea))" />
+    <ComponentMockup ComponentType="@(typeof(TextField))" />*@
+

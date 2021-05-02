@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+
+        <AssemblyTitle>EventHorizon.Blazor.Mockup</AssemblyTitle>
+        <AssemblyName>EventHorizon.Blazor.Mockup</AssemblyName>
+        <PackageId>EventHorizon.Blazor.Mockup</PackageId>
+
+        <Description>Mockup your Blazor UI Components, with sections for documentation, a playground to view the component and an EventViewer..</Description>
+        <PackageTags>ASPNETCore, Blazor, EventHorizon, Mockup, Storybook</PackageTags>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="wwwroot\**" />
+      <Content Remove="wwwroot\**" />
+      <EmbeddedResource Remove="wwwroot\**" />
+      <None Remove="wwwroot\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\EventHorizon.Blazor.UX\EventHorizon.Blazor.UX.csproj" />
+    </ItemGroup>
+
+</Project>
