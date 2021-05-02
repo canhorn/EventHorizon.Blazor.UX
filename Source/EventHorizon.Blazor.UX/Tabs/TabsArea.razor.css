@@ -1,0 +1,77 @@
+﻿.tabs-area {
+    background: var(--tabs-area-background-color);
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.tabs-area__tab-selector {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.tabs-area__tab-selector {
+    background: var(--tabs-selector-background-color);
+}
+
+.tabs-area__tab-select {
+    font-family: var(--tabs-font-family);
+    background: var(--tabs-selector-background-color);
+    color: var(--tabs-selector-color);
+    text-shadow: 0 0 4px var(--tabs-selector-shadow-color);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--tabs-select-border-color);
+    display: block;
+    font-size: 21px;
+    transition: all 250ms ease-out;
+    line-height: 1.5;
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    display: inline-block;
+    padding: 10px 20px;
+    outline: none;
+    position: relative;
+    font-size: 15.75px;
+    transition: all 250ms ease-out;
+    line-height: 1;
+    user-select: none;
+    vertical-align: middle;
+    text-align: left;
+    border-radius: 0;
+}
+
+    .tabs-area__tab-select:hover,
+    .tabs-area__tab-select:focus {
+        border: 1px solid var(--tabs-select-border-hover-color);
+    }
+
+    .tabs-area__tab-select.--active {
+        border-bottom: 3px solid var(--tabs-select-border-hover-color);
+    }
+
+@media (min-width: 768px) {
+    .tabs-area.--side-selector {
+        grid-template-columns: 13% 83%;
+        grid-gap: 1rem;
+    }
+
+    .tabs-area__tab-selector.--side-selector {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .tabs-area__tab-select.--side-selector {
+        border: 1px solid transparent;
+        border-right: 1px solid var(--tabs-select-border-color);
+    }
+
+        .tabs-area__tab-select.--side-selector:hover,
+        .tabs-area__tab-select.--side-selector:focus {
+            border: 1px solid var(--tabs-select-border-hover-color);
+        }
+
+        .tabs-area__tab-select.--side-selector.--active {
+            border-right: 3px solid var(--tabs-select-border-hover-color);
+        }
+}

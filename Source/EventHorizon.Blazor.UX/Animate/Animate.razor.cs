@@ -8,6 +8,6 @@
         [Parameter]
         public bool AnimateEnabled { get; set; } = true;
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public RenderFragment ChildContent { get; set; } = null!;
     }
 }

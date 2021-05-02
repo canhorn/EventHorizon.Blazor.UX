@@ -7,8 +7,24 @@
         : ComponentBase
     {
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public bool EnableNoWrap { get; set; } = true;
+        [Parameter]
+        public RenderFragment ChildContent { get; set; } = null!;
         [Parameter(CaptureUnmatchedValues = true)]
-        public IDictionary<string, object> Attributes { get; set; }
+        public IDictionary<string, object> Attributes { get; set; } = null!;
+
+        public string ElementModifiers
+        {
+            get
+            {
+                var modifers = string.Empty;
+                if (EnableNoWrap)
+                {
+                    modifers += "--no-wrap ";
+                }
+
+                return modifers;
+            }
+        }
     }
 }

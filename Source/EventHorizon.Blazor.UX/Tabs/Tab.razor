@@ -1,0 +1,28 @@
+﻿@if (Parent.ActiveTab == this)
+{
+    <div class="tab__content">
+        @ChildContent
+    </div>
+}
+
+@code {
+    [CascadingParameter]
+    private TabsArea Parent { get; set; } = null!;
+
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        if (Parent == null)
+        {
+            throw new ArgumentNullException(nameof(Parent), "Tab must exist within a TabsArea");
+        }
+
+        Parent.AddTab(this);
+
+        base.OnInitialized();
+    }
+}

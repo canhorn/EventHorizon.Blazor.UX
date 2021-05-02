@@ -7,8 +7,10 @@
         : ComponentBase
     {
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public bool EnableHighlight { get; set; } = true;
+        [Parameter]
+        public RenderFragment ChildContent { get; set; } = null!;
         [Parameter(CaptureUnmatchedValues = true)]
-        public IDictionary<string, object> Attributes { get; set; }
+        public IDictionary<string, object> Attributes { get; set; } = null!;
     }
 }

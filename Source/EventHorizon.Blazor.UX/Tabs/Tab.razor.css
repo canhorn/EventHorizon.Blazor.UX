@@ -1,0 +1,5 @@
+﻿.tab__content {
+    color: var(--tabs-tab-color);
+    background: var(--tabs-tab-background-color);
+    border: 1px solid var(--tabs-tab-border-color);
+}

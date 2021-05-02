@@ -8,13 +8,13 @@
         : ComponentBase
     {
         [Inject]
-        public IJSRuntime JSRuntime { get; set; }
+        public IJSRuntime JSRuntime { get; set; } = null!;
 
         [Parameter]
-        public string @class { get; set; }
+        public string @class { get; set; } = null!;
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public RenderFragment ChildContent { get; set; } = null!;
         [Parameter(CaptureUnmatchedValues = true)]
-        public IDictionary<string, object> Attributes { get; set; }
+        public IDictionary<string, object> Attributes { get; set; } = null!;
     }
 }

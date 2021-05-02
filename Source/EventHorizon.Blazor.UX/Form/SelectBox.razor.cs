@@ -10,20 +10,20 @@
     public class SelectBoxModel
         : ComponentBase
     {
-        private SelectBoxOption _value;
+        private SelectBoxOption _value = new ();
 
         [Parameter]
-        public string id { get; set; }
+        public string id { get; set; } = null!;
         public string Uid { get; private set; } = Guid.NewGuid().ToString();
         [Parameter]
-        public string name { get; set; }
+        public string name { get; set; } = null!;
         [Parameter]
-        public string @class { get; set; }
+        public string @class { get; set; } = null!;
         [Parameter]
         public bool disabled { get; set; }
 
         [Parameter]
-        public string LabelDisplay { get; set; }
+        public string LabelDisplay { get; set; } = null!;
         [Parameter]
         public IList<SelectBoxOption> Options { get; set; } = null!;
         [Parameter]
@@ -37,9 +37,9 @@
                 var newValue = value?.Value?.ToString(
                     CultureInfo.InvariantCulture
                 ) ?? DefaultValue;
-                _value = Options?.FirstOrDefault(
+                _value = Options.FirstOrDefault(
                     option => option.Value == newValue
-                );
+                ) ?? new SelectBoxOption();
             }
         }
         [Parameter]
@@ -47,14 +47,18 @@
 
         public string TextValue
         {
-            get => _value?.Value;
+            get => _value.Value;
             set
             {
                 var newValue = value ?? DefaultValue;
-                Value = Options.FirstOrDefault(
+                var newOption = Options.FirstOrDefault(
                     option => option.Value == newValue
                 );
-                ValueChanged.InvokeAsync(_value);
+                if (newOption is not null)
+                {
+                    Value = newOption;
+                    ValueChanged.InvokeAsync(_value);
+                }
             }
         }
 
@@ -84,7 +88,7 @@
 
     public class SelectBoxOption
     {
-        public string Value { get; set; }
-        public string Text { get; set; }
+        public string Value { get; set; } = string.Empty;
+        public string Text { get; set; } = string.Empty;
     }
 }

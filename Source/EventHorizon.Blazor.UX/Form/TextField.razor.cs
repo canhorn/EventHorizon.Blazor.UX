@@ -8,16 +8,17 @@
         : ComponentBase
     {
         [Parameter]
-        public string id { get; set; }
+        public string id { get; set; } = null!;
         [Parameter]
-        public string name { get; set; }
+        public string name { get; set; } = null!;
         [Parameter]
-        public string @class { get; set; }
+        public string @class { get; set; } = null!;
         [Parameter]
-        public string LabelDisplay { get; set; }
+        public string LabelDisplay { get; set; } = null!;
         [Parameter]
         public bool disabled { get; set; }
-        private string _value;
+
+        private string _value = string.Empty;
         [Parameter]
         public string Value
         {
@@ -32,7 +33,7 @@
         [Parameter]
         public EventCallback<string> ValueChanged { get; set; }
         [Parameter(CaptureUnmatchedValues = true)]
-        public IDictionary<string, object> Attributes { get; set; }
+        public IDictionary<string, object> Attributes { get; set; } = null!;
 
         public string Uid { get; private set; } = Guid.NewGuid().ToString();
     }

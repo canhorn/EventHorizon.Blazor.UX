@@ -11,9 +11,9 @@
         [Parameter]
         public EventCallback<MouseEventArgs> OnClick { get; set; }
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public RenderFragment ChildContent { get; set; } = null!;
         [Parameter(CaptureUnmatchedValues = true)]
-        public IDictionary<string, object> Attributes { get; set; }
+        public IDictionary<string, object> Attributes { get; set; } = null!;
 
         public string Animation { get; set; } = string.Empty;
 

@@ -1,0 +1,66 @@
+﻿<div class="tabs-area @LayoutClassName">
+    <div class="tabs-area__tab-selector @LayoutClassName" role="group">
+        @foreach (Tab tab in TabList)
+        {
+            <button type="button"
+                    class="tabs-area__tab-select @GetButtonClass(tab) @LayoutClassName"
+                    @onclick=@( () => SetActiveTab(tab) )>
+                @tab.Text
+            </button>
+        }
+    </div>
+
+    <div class="tabs-area__tab-list">
+        <CascadingValue Value="this">
+            @ChildContent
+        </CascadingValue>
+    </div>
+</div>
+
+@code {
+
+    public enum TabsAreaLayoutType
+    {
+        Top,
+        Side,
+    }
+
+    [Parameter]
+    public TabsAreaLayoutType Layout { get; set; } = TabsAreaLayoutType.Top;
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    public string LayoutClassName => Layout == TabsAreaLayoutType.Side
+        ? "--side-selector"
+        : string.Empty;
+
+    public Tab? ActiveTab { get; private set; }
+    private List<Tab> TabList = new List<Tab>();
+
+    internal void AddTab(
+        Tab tab
+    )
+    {
+        TabList.Add(tab);
+        if (TabList.Count == 1)
+        {
+            ActiveTab = tab;
+        }
+
+        StateHasChanged();
+    }
+
+    private void SetActiveTab(
+        Tab newActiveTab
+    )
+    {
+        ActiveTab = newActiveTab;
+    }
+
+    private string GetButtonClass(
+        Tab tab
+    )
+    {
+        return tab == ActiveTab ? "--active" : string.Empty;
+    }
+}

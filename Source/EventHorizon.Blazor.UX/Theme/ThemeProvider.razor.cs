@@ -9,10 +9,10 @@
         : ComponentBase
     {
         [Inject]
-        public IJSRuntime Runtime { get; set; }
+        public IJSRuntime Runtime { get; set; } = null!;
 
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public RenderFragment ChildContent { get; set; } = null!;
 
         [Parameter]
         public IDictionary<string, string> Theme { get; set; } = new Dictionary<string, string>

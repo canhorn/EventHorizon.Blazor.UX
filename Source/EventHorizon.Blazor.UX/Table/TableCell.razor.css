@@ -2,3 +2,7 @@
     padding: 5px;
     vertical-align: top;
 }
+
+    .table__cell.--no-wrap {
+        white-space: nowrap;
+    }

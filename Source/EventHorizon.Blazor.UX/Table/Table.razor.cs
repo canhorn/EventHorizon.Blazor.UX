@@ -6,8 +6,8 @@
         : ComponentBase
     {
         [Parameter]
-        public RenderFragment Head { get; set; }
+        public RenderFragment Head { get; set; } = null!;
         [Parameter]
-        public RenderFragment Body { get; set; }
+        public RenderFragment Body { get; set; } = null!;
     }
 }
